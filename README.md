@@ -1,60 +1,59 @@
-# Customer Analytics - Supermarket Segmentation
+# Customer Analytics - Supermarket Segmentation: Project Overview 
+* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
+* Scraped over 1000 job descriptions from glassdoor using python and selenium
+* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
+* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
+* Built a client facing API using flask 
 
-#### -- Project Status: [Completed]
+## Code and Resources Used 
+**Python Version:** 3.7  
+**Packages:** pandas, numpy, sklearn, matplotlib, json
 
-## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+## Data Normalization
+Encrypted customers data is provided by 365DataScience.com contains the following fields 
+*	Sex
+*	Marital status
+*	Age
+*	Education
+*	Income
+*	Occupation
+*	Settlement size
 
-### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
+After loading raw data, I performed data normalization so that all features have equal weight. Otherwise feature, for example, Income would be considered much more important compared to Education.
 
-### Technologies
-* Python
-* Pandas, Scipy, jupyter, Scikitlearn
+## Segmentation via Clustering
+After normalizing the data, I performed clustering as a preliminary analysis of the data to see how the groups would look like from these algorithms
 
-
-## Project Description
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
-This project is done using a dataset provided by 365Datascience.com consisting real encrypted customer dataset. The goal.
-
-## Needs of this project
-
-- data exploration/descriptive statistics
-- data processing/cleaning
-- statistical modeling
-
-## Getting Started
-
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
-
-    *If using offline data mention that and how they may obtain the data from the froup)*
-    
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
-
-5. Follow setup [instructions](Link to file)
-
-## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
+*I tried two different models:
+*	**Hierarchical Clustering** – to get an idea of the ideal number of clusters
+*	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
 
 
-## Contributing DSWG Members
+## EDA
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])(@slackHandle)**
+![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
+![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
+![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/correlation_visual.png "Correlations")
 
-#### Other Members:
+## Model Building 
 
-|Name     |  Slack Handle   | 
-|---------|-----------------|
-|[Full Name](https://github.com/[github handle])| @johnDoe        |
-|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
+First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+
+I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+
+I tried three different models:
+*	**Multiple Linear Regression** – Baseline for the model
+*	**Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
+*	**Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit. 
+
+## Model performance
+The Random Forest model far outperformed the other approaches on the test and validation sets. 
+*	**Random Forest** : MAE = 11.22
+*	**Linear Regression**: MAE = 18.86
+*	**Ridge Regression**: MAE = 19.67
+
+## Productionization 
+In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
+
 
