@@ -27,6 +27,7 @@ After normalizing the data, I performed clustering as a preliminary analysis of 
 *I tried two different models:
 *	**Hierarchical Clustering** – to get an idea of the ideal number of clusters
 *	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
+*	**K-mean Clustering with PCA** – 
 
 
 ## EDA
