@@ -1,5 +1,6 @@
 # Customer Analytics - Supermarket Segmentation: Project Overview 
 * Created predictive models using Multinomial Logistic Regression and Linear Regession to predict probabilities relative to price elasticity. Probability including
+
 **1. Purchase Probability **
 
 **2. Brand Choice Probability **
