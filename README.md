@@ -41,7 +41,7 @@ I tried tree different models:
 *	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
 *	**K-mean Clustering with PCA** – to reduce number of features to only the most important ones.
 
-![Hierarchicalresult](./Image/hier.JPG)
+![Hierarchicalresult](./Image/Hier.JPG)
 ![KmeanWCSS](./Image/kmeanwcss.JPG)
 ![Kmeanclusters](./Image/kmean.JPG)
 
