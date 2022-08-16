@@ -60,13 +60,15 @@ I looked at the distributions of the data and the value counts for the various c
 
 ## Model Building 
 
-*	**Logistic Regression** - is used to calculate price elasticity of purchase probability.
+*	**Logistic Regression** - is used to calculate purchase probability relative to price elasticity.
 
 Price Elasticity = % change in purchase probability / % change in price.
 
 Inelastic, we increase the price of the product since it affects the probability of buying less than 1% per 1% price change.
 
 Elastic, we decrease the price of the product since it affects the probability of buying less than 1% per 1% price change.
+
+![purchaseprob](./Image/purchaseprob.JPG)
 
 ## Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets. 
