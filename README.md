@@ -51,10 +51,11 @@ I looked at the distributions of the data and the value counts for the various c
 
 im EDA1 to 5
 ![EDA1](./Image/EDA1.JPG)
+![EDA1](./Image/EDA2.JPG)
+![EDA1](./Image/EDA3.JPG)
+![EDA1](./Image/EDA4.JPG)
+![EDA1](./Image/EDA5.JPG)
 
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/correlation_visual.png "Correlations")
 
 ## Model Building 
 
