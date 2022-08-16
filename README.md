@@ -1,11 +1,9 @@
 # Customer Analytics - Supermarket Segmentation: Project Overview 
 * Created predictive models using Multinomial Logistic Regression and Linear Regession to predict probabilities relative to price elasticity. Probability including
 
-**1. Purchase Probability **
-
-**2. Brand Choice Probability **
-
-**3. Purchase Quantity**
+1. Purchase Probability 
+2. Brand Choice Probability 
+3. Purchase Quantity
 
 * Engineered features from the Encrypted customers data and purchases data including key features i.e. Sex, Martial status, Age, Income, Education, Occupation, Settlement Size, etc.
 * Performed preliminary and descriptive analysis with Hierarchical Clustering and K-mean Clustering with PCA to understand customer segmentations in the data.
