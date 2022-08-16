@@ -70,6 +70,10 @@ Elastic, we decrease the price of the product since it affects the probability o
 
 ![purchaseprob](./Image/purchaseprob.JPG)
 
+This way we know which products we should increase/decrease in price or add promotions to them
+
+This can be done by customer segments/brands/etc.
+
 ## Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets. 
 *	**Random Forest** : MAE = 11.22
