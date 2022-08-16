@@ -49,7 +49,7 @@ I tried tree different models:
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-![EDA1](./Image/EDA1.JPG)
+![EDA1](./Image/EDA1.JPG {width=40px height=400px})
 ![EDA2](./Image/EDA2.JPG)
 ![EDA3](./Image/EDA3.JPG)
 ![EDA4](./Image/EDA4.JPG)
