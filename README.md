@@ -41,9 +41,9 @@ I tried tree different models:
 *	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
 *	**K-mean Clustering with PCA** – to reduce number of features to only the most important ones.
 
-im hier
-im k-mean
-im k-mean clus with pca
+![Hierarchical result](./Image/Hierarchical result.JPG)
+![K-mean WCSS](./Image/K-mean WCSS.JPG)
+![K-mean clusters](./Image/K-mean clusters.JPG)
 
 
 ## EDA
@@ -51,10 +51,10 @@ I looked at the distributions of the data and the value counts for the various c
 
 im EDA1 to 5
 ![EDA1](./Image/EDA1.JPG)
-![EDA1](./Image/EDA2.JPG)
-![EDA1](./Image/EDA3.JPG)
-![EDA1](./Image/EDA4.JPG)
-![EDA1](./Image/EDA5.JPG)
+![EDA2](./Image/EDA2.JPG)
+![EDA3](./Image/EDA3.JPG)
+![EDA4](./Image/EDA4.JPG)
+![EDA5](./Image/EDA5.JPG)
 
 
 ## Model Building 
