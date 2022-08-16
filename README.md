@@ -50,7 +50,7 @@ im k-mean clus with pca
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
 im EDA1 to 5
-![EDA1](./image/EDA1.JPG)
+![EDA1](./Image/EDA1.JPG)
 
 ![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
 ![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
