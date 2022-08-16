@@ -6,6 +6,7 @@
 **2. Brand Choice Probability **
 
 **3. Purchase Quantity**
+
 * Engineered features from the Encrypted customers data and purchases data including key features i.e. Sex, Martial status, Age, Income, Education, Occupation, Settlement Size, etc.
 * Performed preliminary and descriptive analysis with Hierarchical Clustering and K-mean Clustering with PCA to understand customer segmentations in the data.
 
