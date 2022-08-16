@@ -42,8 +42,8 @@ I tried tree different models:
 *	**K-mean Clustering with PCA** – to reduce number of features to only the most important ones.
 
 ![Hierarchicalresult](./Image/Hierarchical result.JPG)
-![K-meanWCSS](./Image/K-mean WCSS.JPG)
-![K-meanclusters](./Image/K-mean clusters.JPG)
+![KmeanWCSS](./Image/K-mean WCSS.JPG)
+![Kmeanclusters](./Image/K-mean clusters.JPG)
 
 
 ## EDA
