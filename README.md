@@ -1,16 +1,15 @@
 # Customer Analytics - Supermarket Segmentation: Project Overview 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
-* Scraped over 1000 job descriptions from glassdoor using python and selenium
-* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
-* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
-* Built a client facing API using flask 
+* Created models that predict
+* 1. Purchase Probability 2. Brand Choice Probability 3. Purchase Quantity using Multinomial Logistic Regression and Linear Regession
+* Engineered features from the Encrypted customers data including key features i.e. Sex, Martial status, Age, Income, Education, Occupation, Settlement Size 
+* Performed preliminary and descriptive analysis with Hierarchical Clustering and K-mean Clustering to understand customer segmentations in the data.
 
 ## Code and Resources Used 
 **Python Version:** 3.7  
-**Packages:** pandas, numpy, sklearn, matplotlib, json
+**Packages:** pandas, numpy, sklearn, matplotlib, json, pickle
 
 ## Data Normalization
-Encrypted customers data is provided by 365DataScience.com contains the following fields 
+
 *	Sex
 *	Marital status
 *	Age
@@ -24,10 +23,10 @@ After loading raw data, I performed data normalization so that all features have
 ## Segmentation via Clustering
 After normalizing the data, I performed clustering as a preliminary analysis of the data to see how the groups would look like from these algorithms
 
-*I tried two different models:
+*I tried tree different models:
 *	**Hierarchical Clustering** – to get an idea of the ideal number of clusters
 *	**K-mean Clustering** – after getting a decent idea of the expected clusters, perform K-mean to see how the groups result look like.
-*	**K-mean Clustering with PCA** – 
+*	**K-mean Clustering with PCA** – to reduce number of features to only the most important ones.
 
 
 ## EDA
@@ -39,14 +38,13 @@ I looked at the distributions of the data and the value counts for the various c
 
 ## Model Building 
 
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+*	**Logistic Regression** - is used to calculate price elasticity of purchase probability.
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+Price Elasticity = %change in purchase probability/%change in price.
 
-I tried three different models:
-*	**Multiple Linear Regression** – Baseline for the model
-*	**Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-*	**Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit. 
+Inelastic, we increase the price of the product since it affects the probability of buying less than 1% per 1% price change.
+
+Elastic, we decrease the price of the product since it affects the probability of buying less than 1% per 1% price change.
 
 ## Model performance
 The Random Forest model far outperformed the other approaches on the test and validation sets. 
